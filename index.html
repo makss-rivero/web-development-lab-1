@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form — Login and Registration</title>
+    <link rel="stylesheet" href="./src/style.scss">
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <header><h1>FORM</h1></header>
+    <main class="stage">
+      <div class="auth-shell">
+        <div class="backplate">
+          <button type="button" data-mode="login" aria-controls="access-form" aria-pressed="true" disabled>Log in</button>
+          <button type="button" data-mode="register" aria-controls="access-form" aria-pressed="false">Register</button>
+        </div>
+        <form id="access-form" class="form-card" aria-labelledby="form-title">
+          <p>Your space starts here.</p>
+          <h2 id="form-title" tabindex="-1">Log in</h2>
+          <p id="form-description">Good to see you again.</p>
+          <div id="name-field" hidden>
+            <label for="full-name">Your name</label>
+            <input id="full-name" type="text" autocomplete="name" disabled>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label for="password">Password (at least 8 characters)</label>
+            <div class="password-field">
+              <input id="password" type="password" autocomplete="current-password" minlength="8" required>
+              <button id="toggle-password" type="button" aria-label="Show password" aria-controls="password" aria-pressed="false">Show</button>
+            </div>
+          </div>
+          <button id="submit-label" type="submit">Log in</button>
+          <p id="feedback" role="status" aria-live="polite">Demo only. No details are sent.</p>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
